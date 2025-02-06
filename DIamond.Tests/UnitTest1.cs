@@ -15,6 +15,6 @@ public sealed class Diamond
 {
     public static string Build(char input)
     {
-        throw new NotImplementedException();
+        return input.ToString();
     }
 }
