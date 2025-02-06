@@ -348,6 +348,9 @@ __pycache__/
 # OpenCover UI analysis results
 OpenCover/
 
+# Rider
+.idea/
+
 # Azure Stream Analytics local run output
 ASALocalRun/
 
