@@ -31,7 +31,7 @@ public sealed class Diamond
         newRow.OuterSpacesCount = outerSpacesCount;
         // calculate the actual character for this row
         newRow.Character = (char)(StartingCharacter + characterDistance - outerSpacesCount);
-
+        
         return newRow;
     }
 }

@@ -55,9 +55,10 @@ public class DiamondTests
     /*
         Let's focus on building the row spacing, starting from outer spaces
         We need to introduce sorting too
+        Expanding with correct inner spacing now so we should be good to build our foundation
      */
     [Fact]
-    public void Given_validInput_C_Build_returns_a_collection_of_rows_with_correct_outer_spaces_count()
+    public void Given_validInput_C_Build_returns_a_collection_of_rows_with_correct_outer_and_inner_spaces_count()
     {
         const char input = 'C';
         var diamondRowCollection = new List<DiamondRow>()
@@ -65,12 +66,12 @@ public class DiamondTests
             new DiamondRow() { OuterSpacesCount = 2, Character = 'A', InnerSpacesCount = 0, SortOrder = -2 },
             new DiamondRow() { OuterSpacesCount = 1, Character = 'B', InnerSpacesCount = 1, SortOrder = -1 },
             new DiamondRow() { OuterSpacesCount = 0, Character = 'C', InnerSpacesCount = 2, SortOrder = 0 },
-            new DiamondRow() { OuterSpacesCount = 1, Character = 'B', InnerSpacesCount = 0, SortOrder = 1 },
+            new DiamondRow() { OuterSpacesCount = 1, Character = 'B', InnerSpacesCount = 1, SortOrder = 1 },
             new DiamondRow() { OuterSpacesCount = 2, Character = 'A', InnerSpacesCount = 0, SortOrder = 2 },
         };
         
         var result = Diamond.Build(input);
         
-        Assert.Equivalent(diamondRowCollection, result);
+        Assert.Equivalent(diamondRowCollection, result, strict: true);
     }
 }
