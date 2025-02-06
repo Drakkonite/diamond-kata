@@ -3,7 +3,7 @@
 if (args.Length != 1 ||
     args[0].Length != 1)
 {
-    Console.WriteLine("Usage: dotnet Diamond.dll [Uppercase character]");
+    Console.WriteLine("Usage: (Windows) Diamond.exe [Uppercase character] or (Osx/Linux) ./Diamond [Uppercase character]");
     return;
 }
 
