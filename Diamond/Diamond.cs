@@ -2,8 +2,13 @@
 
 public sealed class Diamond
 {
-    public static string Build(char input)
+    public static DiamondRow Build(char input)
     {
-        return input.ToString();
+        return new DiamondRow()
+        {
+            Character = input,
+            InnerSpacesCount = 0,
+            OuterSpacesCount = 0,
+        };
     }
 }

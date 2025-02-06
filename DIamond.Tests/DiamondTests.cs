@@ -25,14 +25,7 @@ public class DiamondTests
         
         var result = Diamond.Build(input);
         
-        Assert.Equal(middlePointRow, result);
+        Assert.Equivalent(middlePointRow, result);
     }
     
-}
-
-public sealed class DiamondRow
-{
-    public int OuterSpacesCount { get; set; }
-    public char Character { get; set; }
-    public int InnerSpacesCount { get; set; }
 }
