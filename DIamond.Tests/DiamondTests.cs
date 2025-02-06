@@ -1,6 +1,6 @@
-﻿namespace DIamond.Tests;
+namespace Diamond.Tests;
 
-public class UnitTest1
+public class DiamondTests
 {
     // Start with the simplest happy path, build diamond with letter A for input A
     [Fact]
@@ -8,13 +8,5 @@ public class UnitTest1
     {
         var result = Diamond.Build('A');
         Assert.Equal("A", result);
-    }
-}
-
-public sealed class Diamond
-{
-    public static string Build(char input)
-    {
-        return input.ToString();
     }
 }
