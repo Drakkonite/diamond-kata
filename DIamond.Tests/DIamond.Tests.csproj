@@ -5,6 +5,10 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <IsPackable>false</IsPackable>
+        <AssemblyName>Diamond.Tests</AssemblyName>
+        <RootNamespace>Diamond.Tests</RootNamespace>
+        <Company>Diamond.Tests</Company>
+        <Product>Diamond.Tests</Product>
     </PropertyGroup>
 
     <ItemGroup>
@@ -16,6 +20,10 @@
 
     <ItemGroup>
         <Using Include="Xunit"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Diamond\Diamond.csproj" />
     </ItemGroup>
 
 </Project>
