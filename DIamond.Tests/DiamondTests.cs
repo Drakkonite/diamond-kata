@@ -65,7 +65,7 @@ public class DiamondTests
         {
             new DiamondRow() { OuterSpacesCount = 2, Character = 'A', InnerSpacesCount = 0, SortOrder = -2 },
             new DiamondRow() { OuterSpacesCount = 1, Character = 'B', InnerSpacesCount = 1, SortOrder = -1 },
-            new DiamondRow() { OuterSpacesCount = 0, Character = 'C', InnerSpacesCount = 2, SortOrder = 0 },
+            new DiamondRow() { OuterSpacesCount = 0, Character = 'C', InnerSpacesCount = 3, SortOrder = 0 },
             new DiamondRow() { OuterSpacesCount = 1, Character = 'B', InnerSpacesCount = 1, SortOrder = 1 },
             new DiamondRow() { OuterSpacesCount = 2, Character = 'A', InnerSpacesCount = 0, SortOrder = 2 },
         };
