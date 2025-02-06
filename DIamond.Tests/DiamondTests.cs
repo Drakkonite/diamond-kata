@@ -38,15 +38,17 @@ public class DiamondTests
      * - 2x 'B' rows
      * - 1x 'A' row
      * Total 3
+     *
+     * As next step let's test the rows count for other inputs
      */
-    [Fact]
-    public void Given_validInput_B_Build_returns_a_collection_of_3_rows()
+    [Theory]
+    [InlineData('B', 3)]
+    [InlineData('D', 7)]
+    [InlineData('G', 13)]
+    public void Given_validInput_Character_Build_returns_a_collection_of_expected_number_of_rows(char input, int expectedRowsCount)
     {
-        const char input = 'B';
-        
         var result = Diamond.Build(input);
         
-        Assert.Equivalent(3, result.Count);
+        Assert.Equivalent(expectedRowsCount, result.Count);
     }
-    
 }
