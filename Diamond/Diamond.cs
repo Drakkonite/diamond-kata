@@ -32,6 +32,16 @@ public sealed class Diamond
         // calculate the actual character for this row
         newRow.Character = (char)(StartingCharacter + characterDistance - outerSpacesCount);
         
+        // we can now calculate the inner spaces count
+        // excluding first and last row as it's always single character, exit fast 
+        if (outerSpacesCount == characterDistance) return newRow;
+        
+        // We need to add the empty spaces between the characters.
+        // The number of spaces are calculated by subtracting occurrences of the  char which is always 2
+        // from total row length and double the outer spaces count to get the actual spaces number
+        var spacesBetweenCount = totalRowLength - 2 - (2 * outerSpacesCount);
+        newRow.InnerSpacesCount = spacesBetweenCount;
+        
         return newRow;
     }
 }
